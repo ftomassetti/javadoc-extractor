@@ -1,7 +1,6 @@
 package me.tomassetti.javadocextractor;
 
 import com.github.javaparser.JavaParser;
-import com.github.javaparser.ParseException;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.comments.JavadocComment;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
@@ -29,7 +28,7 @@ public class JavadocExtractor {
                         }
                     }
                 }.visit(JavaParser.parse(file), null);
-            } catch (ParseException | IOException e) {
+            } catch (IOException e) {
                 new RuntimeException(e);
             }
         }).explore(projectDir);
