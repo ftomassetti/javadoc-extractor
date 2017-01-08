@@ -10,7 +10,10 @@ import me.tomassetti.javadocextractor.support.DirExplorer;
 import java.io.File;
 import java.io.IOException;
 
-public class JavadocExtractor {
+/**
+ * Iterate over the classes and print their Javadoc.
+ */
+public class ClassesJavadocExtractor {
 
     public static void main(String[] args) {
         File projectDir = new File("source_to_parse/");
